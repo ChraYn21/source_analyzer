@@ -1,0 +1,10 @@
+import source_analyzer
+source1=source_analyzer.Source_Analyzer(source=r"C:\Users\Linnemann\Desktop\Test")
+source1.scan()
+source1.showListe()
+print(f"Anzahl Ordner:  " + str(source1.getOrdanzahl()) + "    Größe: " + str(source1.getOrdsize()/(1024*1024)) + " Mebibytes")
+print(f"Anzahl Dateien: " + str(source1.getFileanzahl()) + "    Größe: " + str(source1.getFilesize()/(1024*1024)) + " Mebibytes")
+print(f"Gesamtgröße: " + str((source1.filesize+source1.ordsize)/(1024*1024)) + " Mebibytes")
+print(f"Das sind die gefundenen Dateiendungen (Punkte in Dateinamen zählen als Dateiendung): " + str(source1.getExtensions()))
+print("Zum Beenden 2 mal ENTER drücken")
+input()
